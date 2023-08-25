@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <stdlib.h>
+int compare(const void *a, const void *b) {
+    return (*(int *)a - *(int *)b);
+}
+
+int main() {
+    int array[] = {0,0,0,0}; 
+    int size = sizeof(array) / sizeof(array[0]);
+    int M = 1; 
+    int N = 2; 
+    qsort(array, size, sizeof(int), compare);
+    int mthMax = array[size - M];
+    int nthMin = array[N - 1];
+    int sum = mthMax + nthMin;
+    int diff = mthMax - nthMin;
+
+    printf("M-th maximum: %d\n", mthMax);
+    printf("N-th minimum: %d\n", nthMin);
+    printf("Sum: %d\n", sum);
+    printf("Difference: %d\n", diff);
+
+    return 0;
+}
+
+
+
+OUTPUT:
+M-th maximum: 0
+N-th minimum: 0
+Sum: 0
+Difference: 0
