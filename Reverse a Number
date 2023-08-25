@@ -19,3 +19,9 @@ int main() {
 }
 
 
+
+
+
+OUTPUT:
+Enter an integer:1234
+Enter an integer: Reversed number = 4321
